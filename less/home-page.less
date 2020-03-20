@@ -1,6 +1,9 @@
 // Home Content
 
 .home {
+  @media @phone{
+    max-width:100%;
+  }
 
   .intro {
 
@@ -13,11 +16,30 @@
     }
   
   }
+  .lift-off{
+     @media @phone{
+        margin:0 auto;
+        padding:30px 20px
+      }
+    h2{
+      margin-bottom:2%;
+    }
+  }
 
   .space-images {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    @media @phone{
+      .two{
+        display:none;
+      }
+      .one{
+        .flex(row, center);
+          width:92%;
+          margin: 0 auto;
+      }
+    }
 
     img {
       width: 28%;
@@ -40,14 +62,25 @@
   }
 
   .walk {
+    .flex(row, center);
     margin-top: 60px;
     border-top: 1px solid @main-border-color;
     padding: 50px 60px;
-    display: flex;
-    justify-content: center;
+
+    @media @phone{
+      padding:30px 20px;
+      display:flex;
+      flex-direction: column;
+      margin:0 auto;
+    }
 
     .walk-text {
       width: 50%;
+      @media @phone{
+        width:100%;
+        order:2;
+        margin-top:5%;
+      }
 
       h3 {
         margin-bottom: 10px;
@@ -57,13 +90,23 @@
         margin-bottom: 26px;
       }
 
-      .btn {
+      button{
+        .custom-btn(#22283A, 98px, #F6F7F8);
+        @media @phone{
+          width:100%;
+          height:70px;
+        }
       }
     }
 
     .walk-img {
       width: 46%;
       margin-left: 4%;
+
+      @media @phone{
+        width:100%;
+        margin:0 auto;
+      }
       
       img {
         width: 100%;
