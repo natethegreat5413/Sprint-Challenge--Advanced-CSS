@@ -1,1 +1,28 @@
 // Navigation code here
+header{
+    .flex(column,center);
+    align-items:center;
+    
+    h1{
+        font-size:43px;
+        margin: 2%;
+    }
+}
+nav{
+    .flex(row, space-between);
+    width: 46%;
+    font-size:1.6rem;
+    margin-bottom:2%;
+
+    @media @phone{
+        width:83%;
+    }
+    a{
+        text-decoration: none;
+    }
+}
+
+.earth{
+    padding-bottom: 2rem;
+    max-width:100%;
+}
